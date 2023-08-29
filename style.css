@@ -1,0 +1,156 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+}
+
+
+/* Styling for the header */
+header {
+    background-color: #f5e6eb;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Styling for the profile section */
+.profile {
+    background-color: #fde4e8;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex; /* Display children side by side */
+    justify-content: space-between; /* Add space between image and info */
+    align-items: center; /* Align items vertically */
+}
+
+.image {
+    height: 180px;
+    width: 140px;
+    border-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.info {
+    flex: 1; /* Let the info div take the remaining space */
+    margin-left: 20px;
+}
+
+/* Styling for headings */
+h2 {
+    margin-top: 9px;
+    color: #e74c3c;
+}
+
+/* Styling for social media links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Styling for footer */
+footer {
+    background-color: #f5e6eb;
+    text-align: center;
+    padding: 8px;
+}
+
+.gallery {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 80px;
+    padding: 20px; /* Adjust padding */
+    margin-left: 5rem;
+}
+
+.box {
+    background-size: cover;
+    background-position: top; /* Center the background image */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    height: 120px; 
+    border-radius: 10px;
+}
+
+.row2 {
+    /* grid-row: span 2; */
+    width: 100px;
+    height: 120px; /* Remove fixed height */
+}
+
+.info-card{
+    margin-left: 45%;
+}
+
+
+.box:hover{
+    /* background-color: #999; */
+    background-color: #747171;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+    font-size: 1.7rem;
+}
+
+.social-media{
+    margin-bottom: 15px;
+}
+
+
+/* Media query for screens up to 768px width (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Adjustments for header */
+    header {
+        padding: 10px;
+    }
+
+    /* Adjustments for profile section */
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .info {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .image {
+        margin-top: 10px;
+        max-width: 100%;
+    }
+
+    /* Adjustments for gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .box {
+        width: calc(50% - 10px);
+    }
+
+    /* Adjustments for footer */
+    footer {
+        padding: 10px;
+    }
+    .info-card{
+        margin-left: 120px;
+    }
+}
